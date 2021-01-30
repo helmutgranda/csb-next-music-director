@@ -1,9 +1,12 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 
-import { Button } from "carbon-components-react";
+import { Button, Content, Grid, Row, Column } from "carbon-components-react";
+import { usePlayer } from "../hooks/use-player.js";
 
 export default function Home() {
+  const { playTestInstrument, stopTestInstrument, resetDefault } = usePlayer();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,40 +17,71 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>MUSIC Director</h1>
 
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <p className={styles.description}>Play music</p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <Content>
+          <Grid>
+            <Row>
+              <Column sm={4} md={8} lg={16}>
+                <h1 className="landing-page__heading">#23 March Steps</h1>
+              </Column>
+              <Column sm={4} md={8} lg={16}>
+                <h3 className="landing-page__subheading">Flute</h3>
+              </Column>
+              <Column sm={4} md={8} lg={16}>
+                <div id="container"></div>
+              </Column>
+            </Row>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+            <Row>
+              <Column>
+                <Button
+                  onClick={() => {
+                    playTestInstrument();
+                  }}
+                  bg="brand800"
+                  rounded="brandRadius"
+                  shadow="4"
+                  className="landing-page__controler"
+                >
+                  Play
+                </Button>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+                <Button
+                  onClick={() => {
+                    stopTestInstrument();
+                  }}
+                  bg="brand800"
+                  rounded="brandRadius"
+                  shadow="4"
+                  kind="danger"
+                >
+                  Stop
+                </Button>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+                <Button
+                  onClick={() => {
+                    resetDefault();
+                  }}
+                  bg="brand800"
+                  rounded="brandRadius"
+                  shadow="4"
+                  className="landing-page__controler"
+                  kind="tertiary"
+                >
+                  Reset
+                </Button>
+
+                <Button
+                  kind="primary"
+                  onClick={() => this.setState({ open: true })}
+                >
+                  New
+                </Button>
+              </Column>
+            </Row>
+          </Grid>
+        </Content>
       </main>
 
       <footer className={styles.footer}>
