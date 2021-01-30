@@ -1,0 +1,21 @@
+{
+  "name": "my-ecomm-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "1.0.1",
+    "carbon-components": "10.27.0",
+    "carbon-components-react": "7.27.0",
+    "carbon-icons": "7.0.7",
+    "next": "10.0.5",
+    "node-sass": "5.0.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "sass": "1.32.5"
+  }
+}
