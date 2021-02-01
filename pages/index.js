@@ -13,6 +13,12 @@ export default function Home() {
       <Head>
         <title>MUSIC Directors</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="preload"
+          href="/fonts/MusiQwik.ttf"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
 
       <main className={styles.main}>
@@ -96,6 +102,7 @@ export default function Home() {
         >
           Created by Helmut Granda
         </a>
+        <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
       </footer>
     </div>
   );
