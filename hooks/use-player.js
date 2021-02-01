@@ -122,15 +122,15 @@ export function usePlayerState() {
     //   processGroup(item, index, numberset[index]);
     // });
 
-    // document.getElementById("item0").className += " noteFlash";
-    // intervalId = setInterval(function () {
-    //   if (document.getElementById("item" + counter) == null) {
-    //     clearInterval(this);
-    //   } else {
-    //     document.getElementById("item" + counter).className += " noteFlash";
-    //     counter++;
-    //   }
-    // }, 600);
+    document.getElementById("item0").className += " noteFlash";
+    intervalId = setInterval(function () {
+      if (document.getElementById("item" + counter) == null) {
+        clearInterval(this);
+      } else {
+        document.getElementById("item" + counter).className += " noteFlash";
+        counter++;
+      }
+    }, 600);
   }
 
   function stopTestInstrument() {

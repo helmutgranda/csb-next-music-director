@@ -19,6 +19,7 @@ export default function Home() {
           as="font"
           crossOrigin=""
         />
+        <script src="https://surikov.github.io/webaudiofont/npm/dist/WebAudioFontPlayer.js" />
       </Head>
 
       <main className={styles.main}>
@@ -87,7 +88,6 @@ export default function Home() {
                 >
                   New
                 </Button>
-                <div id="mycontainer">here it is</div>
               </Column>
             </Row>
           </Grid>
@@ -102,7 +102,6 @@ export default function Home() {
         >
           Created by Helmut Granda
         </a>
-        <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
       </footer>
     </div>
   );

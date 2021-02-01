@@ -6,12 +6,6 @@ export function useMusic() {
   let player = {};
   let audioContext = useRef(null);
   useEffect(() => {
-    let script = document.createElement("script");
-    script.src =
-      "https://surikov.github.io/webaudiofont/npm/dist/WebAudioFontPlayer.js";
-    script.type = "text/javascript";
-    document.getElementsByTagName("head")[0].appendChild(script);
-
     let script2 = document.createElement("script");
     script2.src =
       "https://surikov.github.io/webaudiofontdata/sound/0730_FluidR3_GM_sf2_file.js";
