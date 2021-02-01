@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 
 import { Button, Content, Grid, Row, Column } from "carbon-components-react";
+
 import { usePlayer } from "../hooks/use-player.js";
 
 export default function Home() {
@@ -10,14 +11,16 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>MUSIC Director</title>
+        <title>MUSIC Directors</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>MUSIC Director</h1>
 
-        <p className={styles.description}>Play music</p>
+        <p className={styles.description}>
+          Let music director guide you through the music.
+        </p>
 
         <Content>
           <Grid>
@@ -78,6 +81,7 @@ export default function Home() {
                 >
                   New
                 </Button>
+                <div id="mycontainer">here it is</div>
               </Column>
             </Row>
           </Grid>

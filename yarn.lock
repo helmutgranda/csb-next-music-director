@@ -5058,7 +5058,7 @@ watchpack@^1.7.4:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
 
-webaudiofont@^2.5.24:
+webaudiofont@2.5.56, webaudiofont@^2.5.24:
   version "2.5.56"
   resolved "https://registry.yarnpkg.com/webaudiofont/-/webaudiofont-2.5.56.tgz#0f76387dbaf6be20dbf1feff5f21f121f1401361"
   integrity sha512-YLL5CmCVkTZWSo6bRZFH8bIUVgTjEvxrowER3o+Q3RgYpTVMWB5wVHTd6JCsaMCQIz4/tahwY112qkUL7mYNKw==
