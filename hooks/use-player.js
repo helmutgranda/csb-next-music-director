@@ -56,6 +56,7 @@ export function usePlayerState() {
     let divider = document.createElement("span");
     let replacer = "=";
     divider.className = "notes";
+    
 
     if (index % 4 === 0 && index !== 0) {
       let divider = document.createElement("span");
@@ -66,6 +67,7 @@ export function usePlayerState() {
     if (item !== " ") {
       replacer = noteMap[item + numberset[index]];
       divider.id = "item" + counter;
+      divider.className += " note" + item;
       divider.innerHTML = replacer;
     } else {
       divider.id = "item" + counter;
