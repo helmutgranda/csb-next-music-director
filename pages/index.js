@@ -53,6 +53,7 @@ export default function Home() {
                   rounded="brandRadius"
                   shadow="4"
                   className="landing-page__controler"
+                  id="play_music"
                 >
                   Play
                 </Button>
@@ -65,6 +66,9 @@ export default function Home() {
                   rounded="brandRadius"
                   shadow="4"
                   kind="danger"
+                  id="stop_music"
+                  disabled={true}
+                  className="bx--btn--disabled"
                 >
                   Stop
                 </Button>

@@ -40,7 +40,7 @@ const noteMap = {
 
 export function usePlayerState() {
   const [player, updatePlayer] = useState(defaultPlayer);
-  const { playInstrument, stopInstrument } = useMusic();
+  const { playInstrument, stopInstrument, setInstrument } = useMusic();
 
   useEffect(() => {
     container = document.getElementById("container");
@@ -94,7 +94,7 @@ export function usePlayerState() {
         numberset[positionflagged]++;
       }
     }
-    console.log(numberset);
+    
   }
 
   function createChordOpening() {
@@ -112,28 +112,38 @@ export function usePlayerState() {
   }
 
   function playTestInstrument() {
+    document.getElementById("play_music").classList.add("bx--btn--disabled");
+    document.getElementById("play_music").setAttribute("disabled", true);
+    document.getElementById("stop_music").removeAttribute("disabled");
+    document.getElementById("stop_music").classList.remove("bx--btn--disabled");
+    document.getElementById("stop_music").onclick = stopTestInstrument;
     let sets = defaultset.split("");
-    stopTestInstrument();
+    stopInstrument();
     playInstrument(sets, numberset);
-    
-
     let counter = 1;
-
     document.getElementById("item0").className += " noteFlash";
-    intervalId = setInterval(function () {
+    window.intervalId = setInterval(function () {
       if (document.getElementById("item" + counter) == null) {
-        clearInterval(this);
+        clearInterval(window.intervalId);
       } else {
         document.getElementById("item" + counter).className += " noteFlash";
         counter++;
       }
     }, 600);
+
+    console.log("ID SET", window.intervalId)
   }
 
   function stopTestInstrument() {
+    console.log(window);
+    document.getElementById("play_music").removeAttribute("disabled");
+    document.getElementById("play_music").classList.remove("bx--btn--disabled");
+    document.getElementById("stop_music").classList.add("bx--btn--disabled");
+    document.getElementById("stop_music").setAttribute("disabled", true);
     stopInstrument();
-    clearInterval(intervalId);
+    clearInterval(window.intervalId);
     let noteFlashItems = [...document.getElementsByClassName("noteFlash")];
+    console.log(noteFlashItems);
     noteFlashItems.forEach(function (item) {
       item.classList.remove("noteFlash");
     });

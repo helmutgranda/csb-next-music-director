@@ -43,7 +43,7 @@ export function useMusic() {
     };
 
     if (item !== " ") {
-      player.queueWaveTable(
+      player.queueChord(
         audioContext,
         audioContext.destination,
         _tone_0730_FluidR3_GM_sf2_file,
@@ -52,6 +52,13 @@ export function useMusic() {
         0.5 * sets_length
       );
     }
+  }
+
+  function setInstrument(sets, numberset) {
+    // console.log("here is where we just set it up")
+    // sets.forEach((item, index) => {
+    //   processGroup(item, index, numberset[index]);
+    // });
   }
 
   function playInstrument(sets, numberset) {
@@ -66,7 +73,8 @@ export function useMusic() {
 
   return {
     playInstrument,
-    stopInstrument
+    stopInstrument,
+    setInstrument
   };
 }
 
