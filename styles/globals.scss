@@ -22,9 +22,49 @@ a {
   src: url("/fonts/MusiQwik.ttf") format('truetype');
 }
 
+#container {
+  position: relative;
+}
+
 .notes {
   font-family: music, "Courier New", Courier, monospace;
   font-size: 2.5em;
+}
+
+.notes::before {
+  position: absolute;
+  bottom: 35px;
+  padding: 0;
+  margin: 0;
+  font-family: Courier;
+  font-size: 0.4em;
+}
+
+.notea::before {
+  content: "A";
+}
+
+.noteb::before {
+  content: "B";
+}
+
+.notec::before {
+  content: "C";
+}
+
+.noted::before {
+  content: "D";
+}
+
+.notee::before {
+  content: "E";
+}
+
+.notef::before {
+  content: "F";
+}
+.noteg::before {
+  content: "G";
 }
 
 .noteFlash {

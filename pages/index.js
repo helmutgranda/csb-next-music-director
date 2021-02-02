@@ -26,7 +26,7 @@ export default function Home() {
         <h1 className={styles.title}>MUSIC Director</h1>
 
         <p className={styles.description}>
-          Let music director guide you through the music.
+          Let music director guide you...
         </p>
 
         <Content>

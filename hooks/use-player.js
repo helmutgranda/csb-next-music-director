@@ -110,17 +110,12 @@ export function usePlayerState() {
   }
 
   function playTestInstrument() {
-    console.log("Play Instrument goes here");
     let sets = defaultset.split("");
+    stopTestInstrument();
     playInstrument(sets, numberset);
-    // stopTestInstrument();
+    
 
-    // let counter = 1;
-    // let sets = defaultset.split("");
-
-    // sets.forEach((item, index) => {
-    //   processGroup(item, index, numberset[index]);
-    // });
+    let counter = 1;
 
     document.getElementById("item0").className += " noteFlash";
     intervalId = setInterval(function () {
@@ -135,6 +130,11 @@ export function usePlayerState() {
 
   function stopTestInstrument() {
     stopInstrument();
+    clearInterval(intervalId);
+    let noteFlashItems = [...document.getElementsByClassName("noteFlash")];
+    noteFlashItems.forEach(function (item) {
+      item.classList.remove("noteFlash");
+    });
   }
 
   function resetDefault() {
