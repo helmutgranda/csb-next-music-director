@@ -35,10 +35,10 @@ export default function Home() {
               <Column sm={4} md={8} lg={16}>
                 <h1 className="landing-page__heading">#23 March Steps</h1>
               </Column>
-              <Column sm={4} md={8} lg={16}>
+              <Column sm={4} md={8} lg={16}  style={{ margin: '0 0 30px' }}>
                 <h3 className="landing-page__subheading">Flute</h3>
               </Column>
-              <Column sm={4} md={8} lg={16}>
+              <Column sm={4} md={8} lg={16}  style={{ margin: '0 0 30px' }}>
                 <div id="container"></div>
               </Column>
             </Row>
