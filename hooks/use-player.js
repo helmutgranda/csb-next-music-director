@@ -152,13 +152,17 @@ export function usePlayerState() {
   function resetDefault() {
     console.log("reset default");
   }
-
+  
+  function updateCords() {
+    console.log("updating Cords")
+  }
   return {
     player,
     updatePlayer,
     playTestInstrument,
     stopTestInstrument,
-    resetDefault
+    resetDefault,
+    updateCords
   };
 }
 

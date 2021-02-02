@@ -1,12 +1,14 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
+import { useState } from "react";
 
-import { Button, Content, Grid, Row, Column } from "carbon-components-react";
+import { Button, Content, Grid, Row, Column, ComposedModal, ModalHeader, ModalBody, Form, TextInput } from "carbon-components-react";
 
 import { usePlayer } from "../hooks/use-player.js";
 
 export default function Home() {
-  const { playTestInstrument, stopTestInstrument, resetDefault } = usePlayer();
+  const { playTestInstrument, stopTestInstrument, resetDefault, updateCords } = usePlayer();
+  const [modalOpen, setModal] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -21,16 +23,58 @@ export default function Home() {
         />
         <script src="https://surikov.github.io/webaudiofont/npm/dist/WebAudioFontPlayer.js" />
       </Head>
-
+      <ComposedModal
+            size="md"
+            open={modalOpen}
+            onClose={() => setModal(false)}
+          >
+            <ModalHeader>Create a new songs</ModalHeader>
+            <ModalBody>
+              <Form>
+                <div class="bx--row">
+                  <div class="bx--col-lg-13 bx--col-md-6 bx--col-sm-2">
+                    <div class="outside">
+                      <div class="inside">
+                        <TextInput
+                          helperText="Letters a to g and spaces allowed"
+                          id="fullNotes"
+                          invalidText="only a to g and spaces allowed."
+                          placeholder="bdbdc   edced   dfdfedc fedcb b "
+                          pattern="[a-g ]+"
+                          light
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bx--col-lg-3 bx--col-md-2 bx--col-sm-2">
+                    <div class="outside">
+                      <div class="inside">
+                        <Button
+                          onClick={updateCords}
+                          bg="brand800"
+                          rounded="brandRadius"
+                          shadow="4"
+                          kind="secondary"
+                        >
+                          Submit
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Form>
+            </ModalBody>
+          </ComposedModal>
       <main className={styles.main}>
         <h1 className={styles.title}>MUSIC Director</h1>
 
         <p className={styles.description}>
-          Let music director guide you...
+          Need to practice? Let me guide you...
         </p>
 
         <Content>
           <Grid>
+
             <Row>
               <Column sm={4} md={8} lg={16}>
                 <h1 className="landing-page__heading">#23 March Steps</h1>
@@ -88,7 +132,7 @@ export default function Home() {
 
                 <Button
                   kind="primary"
-                  onClick={() => this.setState({ open: true })}
+                  onClick={() => setModal(true)}
                 >
                   New
                 </Button>
