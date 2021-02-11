@@ -224,7 +224,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Music Directors</title>
+        <title>Next Music Director</title>
         <link rel="icon" href="/favicon.ico" />
         <script defer src="https://surikov.github.io/webaudiofont/npm/dist/WebAudioFontPlayer.js" />
         <script defer src="https://surikov.github.io/webaudiofontdata/sound/0730_FluidR3_GM_sf2_file.js" />
@@ -234,7 +234,7 @@ export default function Home() {
       <ModalView modalOpen={modalOpen} setModal={setModal} updateCords={updateCords}/>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>MUSIC Director</h1>
+        <h1 className={styles.title}>Next Music Director</h1>
 
         <p className={styles.description}>
           Need to practice? Let me guide you...

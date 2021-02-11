@@ -14,7 +14,7 @@ const ModalView = ({modalOpen, setModal, updateCords}) => (
           <div className="outside">
             <div className="inside">
               <TextInput
-              labelText="Music Director"
+              labelText="Next Music Director"
                 helperText="Letters a to g and spaces allowed"
                 id="fullNotes"
                 invalidText="only a to g and spaces allowed."
