@@ -318,6 +318,12 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Created by Helmut Granda
+        </a>&nbsp;|&nbsp;<a
+          href="https://github.com/helmutgranda/csb-next-music-director"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Source in GitHub
         </a>
       </footer>
     </div>
