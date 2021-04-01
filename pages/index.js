@@ -4,6 +4,7 @@ import { Button, Content, Grid, Row, Column } from "carbon-components-react";
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
 
 import ModalView from "../components/ModalView";
+import GlobalHeader from "../components/GlobalHeader"
 
 const noteMapSrc = {
   A1: "^",
@@ -222,6 +223,8 @@ export default function Home() {
 
 
   return (
+    <>
+    <GlobalHeader></GlobalHeader>
     <div className={styles.container}>
       <Head>
         <title>Next Music Director</title>
@@ -327,5 +330,6 @@ export default function Home() {
         </a>
       </footer>
     </div>
+    </>
   )
 }
