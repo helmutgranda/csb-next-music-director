@@ -18,5 +18,8 @@
     "react-dom": "17.0.1",
     "sass": "1.32.5",
     "webaudiofont": "2.5.56"
+  },
+  "devDependencies": {
+    "@carbon/ibmdotcom-react": "^1.17.0"
   }
 }
