@@ -33,7 +33,7 @@ const GlobalHeader = () => (
           Music Director
         </HeaderName></a></Link>
         <HeaderNavigation aria-label="Carbon Tutorial">
-        <Link href="/sheets"><HeaderMenuItem href="#"> Sheets</HeaderMenuItem></Link>
+          <Link href="/sheets"><HeaderMenuItem href="#"> Sheets</HeaderMenuItem></Link>
         </HeaderNavigation>
         <SideNav
           aria-label="Side navigation"
