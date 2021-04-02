@@ -333,7 +333,7 @@ export default function Home() {
     <Content className={styles.footer}>
       <GlobalFooter></GlobalFooter>
     </Content>
-    <Footer type="micro" disableLocaleButton="true" navigation={nav} />
+    <Footer type="micro" disableLocaleButton={true} navigation={nav} />
     
     </>
   )
