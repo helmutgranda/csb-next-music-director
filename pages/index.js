@@ -5,6 +5,9 @@ import { useState, useEffect, useLayoutEffect, useRef } from "react";
 
 import ModalView from "../components/ModalView";
 import GlobalHeader from "../components/GlobalHeader"
+import GlobalFooter from "../components/GlobalFooter"
+import { Footer } from "@carbon/ibmdotcom-react";
+
 
 const noteMapSrc = {
   A1: "^",
@@ -38,7 +41,20 @@ const noteMapSrc = {
 };
 
 
-
+const nav = {
+  footerThin: [{
+      title: "Contact Creator",
+      url: "/"
+    },
+    {
+      title: "Privacy",
+      url: "/privacy"
+    },
+    {
+      title: "Terms of use",
+      url: "/terms"
+    }]
+}
 
 export default function Home() {
 
@@ -308,28 +324,16 @@ export default function Home() {
               </Column>
             </Row>
           </Grid>
-        </Content>
-
+        </Content>                  
       </main>
 
-
-
-      <footer className={styles.footer}>
-      <a
-          href="https://helmutgranda.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Created by Helmut Granda
-        </a>&nbsp;|&nbsp;<a
-          href="https://github.com/helmutgranda/csb-next-music-director"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Source in GitHub
-        </a>
-      </footer>
     </div>
+
+    <Content className={styles.footer}>
+      <GlobalFooter></GlobalFooter>
+    </Content>
+    <Footer type="micro" disableLocaleButton="true" navigation={nav} />
+    
     </>
   )
 }
