@@ -1,12 +1,11 @@
 import React from 'react';
-import Link from "next/link";
-import { Button, Content, Grid, Row, Column } from "carbon-components-react";
+import { Grid, Row, Column } from "carbon-components-react";
 
 const GlobalFooter = () => (
   <>
     <Grid>
       <Row>
-        <Column><h3>NExtMusicDirector</h3>
+        <Column><h3>NextMusicDirector</h3>
         <p>The idea behind music director comes from the need of students be able to practice and be able to follow the cords along.</p>
         </Column>
         <Column>
